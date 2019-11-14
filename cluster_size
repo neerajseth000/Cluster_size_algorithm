@@ -1,0 +1,22 @@
+from __future__ import division
+def cluster_size():
+    
+    for i in clusters_df.num_clusters:
+        slope=np.diff(clusters_df.cluster_errors)-np.diff(clusters_df.num_clusters)
+    # print(slope)
+
+    x=slope[:-1]/slope[1:]
+    # print(x)
+    z=1
+    for i in range (0,len(x)):
+        n=np.diff(x)
+    # print(n)
+    z=1
+    for i in n:
+        if abs(i)>1:
+            z=z+1
+        else:
+            break
+    print("Cluster size may be",z)
+
+cluster_size()
